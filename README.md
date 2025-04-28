@@ -36,7 +36,6 @@ Follow these steps to set up and run the project:
 
 6.  **Build and Start the Project:** Build the project and start it using the ElizaOS CLI:
     ```bash
-    bun install # Make sure dependencies are installed
     bun run build && elizaos start
     ```
 
