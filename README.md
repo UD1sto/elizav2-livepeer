@@ -11,21 +11,20 @@ Follow these steps to set up and run the project:
 2.  **Clone the Livepeer Plugin:** Navigate to the `packages` directory within your main ElizaOS checkout and clone the `plugin-livepeer-inference` repository:
     ```bash
     cd path/to/eliza/packages
-    git clone https://github.com/UD1sto/plugin-livepeer-inference.git plugin-livepeer-inference
+    git clone https://github.com/UD1sto/plugin-livepeer-inference.git
     ```
     *Note: Renaming the directory to `plugin-livepeer-inference` during clone might be necessary if the project expects that specific name.*
 
 3.  **Build the Livepeer Plugin:** Change into the plugin directory and build it:
     ```bash
     cd plugin-livepeer-inference
-    bun install # Make sure dependencies are installed
     bun run build
     ```
 
 4.  **Clone this Project:** Go back to the root directory of your main ElizaOS checkout and clone this project repository:
     ```bash
     cd path/to/eliza # Go back to the root
-    git clone <your-livepeer-project-repo-url> livepeer-project # Replace with the actual repo URL
+    git clone https://github.com/UD1sto/elizav2-livepeer.git
     ```
 
 5.  **Configure Environment:** Navigate into this project directory (`livepeer-project`), copy the example environment file, and fill in your details (especially the Livepeer API key and gateway URL):
@@ -38,8 +37,7 @@ Follow these steps to set up and run the project:
 6.  **Build and Start the Project:** Build the project and start it using the ElizaOS CLI:
     ```bash
     bun install # Make sure dependencies are installed
-    bun run build
-    elizaos start --project . # Start the project from its directory
+    bun run build && elizaos start
     ```
 
 7.  **Interact with the Agent:** Open your web browser and go to [http://localhost:3000](http://localhost:3000). You should now be able to chat with the Eliza agent, which will use the Livepeer plugin for inference if configured correctly in your `.env` file.
